@@ -34,6 +34,6 @@
 
   </template>
 
-  <script inline src="./toggle-button-content.js"></script>
+  <script>"use strict";new Polymer({is:"toggle-button-content",properties:{focusIgnore:{type:Boolean,value:!1,reflectToAttribute:!0},name:{type:String,notify:!0},value:{type:Boolean,notify:!0}},onLabelClick:function(){this.focusIgnore?this.onFocus():this.value=!this.value},onFocus:function(){this.fire("focus")},_removeTracking:function(){var t=this.$.toggler;t._ontrack=function(){},t._trackStart=null,t._trackMove=null,t._trackEnd=null},ready:function(){this._removeTracking(),this.$.toggler.removeOwnKeyBindings()}});</script>
 
 </dom-module>
