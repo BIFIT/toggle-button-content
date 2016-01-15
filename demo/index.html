@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>toggle-button-content demo</title>
+  <script src="../../../../../bower_components/webcomponentsjs/webcomponents.js"></script>
+
+  <link rel="import" href="../toggle-button-content.html">
+</head>
+<body unresolved>
+
+<toggle-button-content name="x1"
+                       value="{{value1}}">Value 1
+</toggle-button-content>
+
+<toggle-button-content name="x2"
+                       focus-ignore
+                       value="{{value2}}">Value 2
+</toggle-button-content>
+
+<script>
+
+  window.addEventListener('WebComponentsReady', function (e) {
+    var button2 = document.querySelector('[name="x2"]');
+  });
+
+</script>
+
+</body>
+</html>

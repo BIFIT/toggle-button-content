@@ -1,0 +1,39 @@
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/paper-toggle-button/paper-toggle-button.html">
+
+<dom-module id="toggle-button-content">
+
+  <style>
+
+    :host {
+      position: relative;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+  </style>
+
+  <template>
+
+    <paper-toggle-button id="toggler"
+                         on-focus="onFocus"
+                         name$="[[name]]"
+                         value="{{value}}"
+                         checked="{{value}}"></paper-toggle-button>
+
+    <label for$="[[name]]"
+           on-click="onLabelClick">
+      <content></content>
+    </label>
+
+  </template>
+
+  <script inline src="toggle-button-content.js"></script>
+
+</dom-module>
