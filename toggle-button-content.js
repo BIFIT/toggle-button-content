@@ -45,8 +45,7 @@ new Polymer({
     _removeTracking () {
     let ptb = this.$.toggler;
 
-    ptb._ontrack = function () {
-    };
+    ptb._ontrack = () => {};
     ptb._trackStart = null;
     ptb._trackMove = null;
     ptb._trackEnd = null;
