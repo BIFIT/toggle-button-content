@@ -24,8 +24,8 @@
     <paper-toggle-button id="toggler"
                          on-focus="onFocus"
                          name$="[[name]]"
-                         value="{{value}}"
-                         checked="{{value}}"></paper-toggle-button>
+                         value="{{_bool(value)}}"
+                         checked="[[_bool(value)]]"></paper-toggle-button>
 
     <label for$="[[name]]"
            on-click="onLabelClick">

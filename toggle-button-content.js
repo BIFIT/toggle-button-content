@@ -19,11 +19,18 @@ new Polymer({
   },
 
   /**
+   *
+   */
+    _bool(value) {
+    return Boolean(value);
+  },
+
+  /**
    * Toggle value
    */
     onLabelClick() {
 
-    if(!this.focusIgnore) {
+    if (!this.focusIgnore) {
       this.value = !this.value;
     } else {
       this.onFocus();
@@ -45,7 +52,8 @@ new Polymer({
     _removeTracking () {
     let ptb = this.$.toggler;
 
-    ptb._ontrack = () => {};
+    ptb._ontrack = () => {
+    };
     ptb._trackStart = null;
     ptb._trackMove = null;
     ptb._trackEnd = null;
