@@ -31,7 +31,7 @@ new Polymer({
     onLabelClick() {
 
     if (!this.focusIgnore) {
-      this.value = !this.value;
+      this.value = Boolean(!this.value);
     } else {
       this.onFocus();
     }

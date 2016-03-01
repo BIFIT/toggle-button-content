@@ -3,29 +3,32 @@
 
 <dom-module id="toggle-button-content">
 
-  <style>
-
-    :host {
-      position: relative;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    label {
-      cursor: pointer;
-    }
-
-  </style>
-
   <template>
+
+    <style>
+
+      :host {
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      label {
+        cursor: pointer;
+      }
+
+      paper-toggle-button {
+        float: left;
+      }
+
+    </style>
 
     <paper-toggle-button id="toggler"
                          on-focus="onFocus"
                          name$="[[name]]"
                          value="{{_bool(value)}}"
-                         checked="[[_bool(value)]]"></paper-toggle-button>
+                         checked="{{value}}"></paper-toggle-button>
 
     <label for$="[[name]]"
            on-click="onLabelClick">
