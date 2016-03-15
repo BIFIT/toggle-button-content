@@ -14,7 +14,8 @@
         user-select: none;
       }
 
-      label {
+      paper-toggle-button:hover,
+      label:hover {
         cursor: pointer;
       }
 
@@ -37,6 +38,6 @@
 
   </template>
 
-  <script>"use strict";new Polymer({is:"toggle-button-content",properties:{focusIgnore:{type:Boolean,value:!1,reflectToAttribute:!0},name:{type:String,notify:!0},value:{type:Boolean,notify:!0}},_bool:function(o){return Boolean(o)},onLabelClick:function(){this.focusIgnore?this.onFocus():this.value=Boolean(!this.value)},onFocus:function(){this.fire("focus")},_removeTracking:function(){var o=this.$.toggler;o._ontrack=function(){},o._trackStart=null,o._trackMove=null,o._trackEnd=null},ready:function(){this._removeTracking(),this.$.toggler.removeOwnKeyBindings()}});</script>
+  <script>"use strict";new Polymer({is:"toggle-button-content",properties:{focusIgnore:{type:Boolean,value:!1,reflectToAttribute:!0},name:{type:String,notify:!0},value:{type:Boolean,notify:!0}},_bool:function(t){return Boolean(t)},onLabelClick:function(){this.focusIgnore?this.onFocus():this.$.toggler.fire("click")},onFocus:function(){this.fire("focus")},_removeTracking:function(){var t=this.$.toggler;t._ontrack=function(){},t._trackStart=null,t._trackMove=null,t._trackEnd=null},ready:function(){this._removeTracking(),this.$.toggler.removeOwnKeyBindings()}});</script>
 
 </dom-module>

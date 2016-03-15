@@ -19,7 +19,8 @@ new Polymer({
   },
 
   /**
-   *
+   * @param value {number}
+   * @return {boolean}
    */
     _bool(value) {
     return Boolean(value);
@@ -31,7 +32,7 @@ new Polymer({
     onLabelClick() {
 
     if (!this.focusIgnore) {
-      this.value = Boolean(!this.value);
+      this.$.toggler.fire('click');
     } else {
       this.onFocus();
     }
@@ -50,7 +51,7 @@ new Polymer({
    * @private
    */
     _removeTracking () {
-    let ptb = this.$.toggler;
+    const ptb = this.$.toggler;
 
     ptb._ontrack = () => {
     };
